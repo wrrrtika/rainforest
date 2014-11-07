@@ -1,0 +1,10 @@
+<h1>RAIN FOREST PRODUCTS</h1>
+<i><p>we're totally not amazon</p></i>
+
+<%= link_to "Upload Your Own", "products/new" %>
+
+<% @products.each do |product| %>
+	<p><%= product.name %>, <%= product.price_in_cents %></p>
+	<%= link_to image_tag(picture.url), "products/#{product.id}" %>
+
+<% end %>
