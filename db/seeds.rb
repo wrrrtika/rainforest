@@ -7,8 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Product.create!(
-	:name => "Headlight Grease"
-	:description => "Grade A Headlight Grease, Capable of Lubricating the Dryest of halogens"
+Product.create!([{
+	:name => "Headlight Grease",
+	:description => "Grade A Headlight Grease, Capable of Lubricating the Driest of halogens",
 	:price_in_cents => "100000"
-)
+
+}])
