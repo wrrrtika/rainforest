@@ -1,10 +1,13 @@
 <h1>RAIN FOREST PRODUCTS</h1>
 <i><p>we're totally not amazon</p></i>
 
-<%= link_to "Upload Your Own", "products/new" %>
+<%= link_to("Upload New Product", new_product_path) %>
 
 <% @products.each do |product| %>
-	<p><%= product.name %>, <%= product.price_in_cents %></p>
+	
+	<p><%= link_to product.name, product_path(product) %></p>
+	<p>Price: $<%= product.formatted_price %></p>
+
 
 
 <% end %>
